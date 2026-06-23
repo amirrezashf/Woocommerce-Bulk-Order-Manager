@@ -1,111 +1,114 @@
-## Development
+# Bulk Order Manager for WooCommerce
 
-### Architecture
+Manage WooCommerce orders in bulk from a dedicated administration panel. Update order statuses, add internal notes, preview affected orders, review activity logs, and streamline repetitive order management tasks.
 
-The plugin is built entirely on top of WordPress and WooCommerce APIs and does not modify any WooCommerce core files.
+## Features
 
-Main components:
+- Bulk order status updates
+- Bulk internal order notes
+- Order preview before execution
+- Activity logs
+- Lock protection against concurrent operations
+- WooCommerce administration integration
+- AJAX-powered actions
+- Support for large order batches
 
-- WooCommerce administration pages
-- Bulk order actions
-- AJAX request handlers
-- Activity logging system
-- Order preview engine
-- Operation locking mechanism
+## Requirements
 
-### Data Storage
+- WordPress 6.0+
+- WooCommerce 7.0+
+- PHP 7.4+
 
-The plugin stores its configuration and operational data using standard WordPress options and WooCommerce order metadata when required.
+## Installation
 
-No WooCommerce database tables are modified.
+1. Upload the plugin files to the `/wp-content/plugins/` directory.
+2. Activate the plugin through the WordPress Plugins page.
+3. Open the plugin page from the WooCommerce menu.
+4. Start managing orders in bulk.
 
-### Security
+## Frequently Asked Questions
 
-Several security measures are implemented:
+### Does this plugin support custom order statuses?
 
-- Nonce verification for all AJAX requests
-- Capability checks before executing operations
-- Input sanitization and validation
-- Safe database interactions using WordPress APIs
+Yes. Any properly registered WooCommerce order status can be used.
 
-### WooCommerce Compatibility
+### Does this plugin modify WooCommerce core files?
 
-The plugin is designed to work with:
+No. The plugin uses standard WordPress and WooCommerce APIs and does not modify core files.
 
-- Traditional WooCommerce order storage
-- High Performance Order Storage (HPOS)
+### Can I add notes to multiple orders at once?
 
-### Extending the Plugin
+Yes. Internal notes can be added to multiple orders in a single operation.
 
-Developers can extend the plugin by:
+## Changelog
 
-- Adding new bulk actions
-- Creating custom order filters
-- Integrating additional order statuses
-- Extending activity logs
-- Adding custom validation rules
+### 1.0.0
 
-### Coding Standards
-
-The project follows:
-
-- WordPress Coding Standards
-- WooCommerce Development Guidelines
-- Secure WordPress Plugin Development Practices
+- Initial release
+- Bulk order status updates
+- Bulk internal notes
+- Order preview system
+- Activity logs
+- Lock protection
 
 ---
 
-# توسعه افزونه
+# مدیریت گروهی سفارشات ووکامرس
 
-## معماری
+این افزونه به شما امکان می‌دهد تعداد زیادی از سفارشات ووکامرس را از طریق یک پنل مدیریتی اختصاصی مدیریت کنید. وضعیت سفارش‌ها را بصورت گروهی تغییر دهید، یادداشت خصوصی ثبت کنید، سفارش‌های انتخاب شده را قبل از اجرا بررسی کنید و تاریخچه فعالیت‌ها را مشاهده نمایید.
 
-این افزونه به طور کامل بر پایه APIهای وردپرس و ووکامرس توسعه داده شده و هیچ تغییری در فایل‌های اصلی ووکامرس ایجاد نمی‌کند.
+## امکانات
 
-بخش‌های اصلی افزونه شامل موارد زیر است:
+- تغییر گروهی وضعیت سفارشات
+- افزودن یادداشت خصوصی به چندین سفارش
+- پیش نمایش سفارش‌ها قبل از اجرای عملیات
+- ثبت و نگهداری تاریخچه فعالیت‌ها
+- جلوگیری از اجرای همزمان عملیات‌های متداخل
+- یکپارچگی کامل با ووکامرس
+- اجرای عملیات‌ها بصورت AJAX
+- مناسب برای فروشگاه‌های با تعداد سفارش بالا
 
-- صفحات مدیریتی ووکامرس
-- عملیات گروهی روی سفارشات
-- پردازش درخواست‌های AJAX
-- سیستم ثبت تاریخچه فعالیت‌ها
+## پیش نیازها
+
+- وردپرس ۶.۰ یا بالاتر
+- ووکامرس ۷.۰ یا بالاتر
+- PHP 7.4 یا بالاتر
+
+## نصب
+
+1. فایل افزونه را در مسیر `/wp-content/plugins/` بارگذاری کنید.
+2. افزونه را از بخش افزونه‌های وردپرس فعال کنید.
+3. از منوی ووکامرس وارد صفحه افزونه شوید.
+4. مدیریت گروهی سفارشات را آغاز کنید.
+
+## سوالات متداول
+
+### آیا از وضعیت‌های سفارشی سفارش پشتیبانی می‌کند؟
+
+بله. تمامی وضعیت‌های سفارشی ثبت شده در ووکامرس پشتیبانی می‌شوند.
+
+### آیا فایل‌های اصلی ووکامرس را تغییر می‌دهد؟
+
+خیر. افزونه از API و هوک‌های استاندارد وردپرس و ووکامرس استفاده می‌کند.
+
+### آیا امکان ثبت یادداشت برای چند سفارش بصورت همزمان وجود دارد؟
+
+بله. می‌توانید یک یادداشت خصوصی را برای چندین سفارش در یک عملیات ثبت کنید.
+
+## تغییرات
+
+### نسخه 1.0.0
+
+- انتشار اولیه افزونه
+- امکان تغییر گروهی وضعیت سفارشات
+- افزودن یادداشت خصوصی گروهی
 - سیستم پیش نمایش سفارشات
-- مکانیزم جلوگیری از تداخل عملیات
+- ثبت تاریخچه فعالیت‌ها
+- جلوگیری از تداخل عملیات
 
-## ذخیره سازی اطلاعات
+## نویسنده
 
-اطلاعات مورد نیاز افزونه از طریق مکانیزم‌های استاندارد وردپرس و متای سفارشات ووکامرس ذخیره می‌شود.
+Amirreza Shayesteh Far
 
-این افزونه هیچ تغییری در ساختار جداول اصلی ووکامرس ایجاد نمی‌کند.
-
-## امنیت
-
-برای افزایش امنیت افزونه موارد زیر پیاده سازی شده است:
-
-- بررسی Nonce در تمامی درخواست‌های AJAX
-- بررسی سطح دسترسی کاربران
-- اعتبارسنجی و پاکسازی داده‌های ورودی
-- استفاده از توابع استاندارد وردپرس برای ارتباط با پایگاه داده
-
-## سازگاری با ووکامرس
-
-افزونه با هر دو ساختار ذخیره سازی سفارشات ووکامرس سازگار است:
-
-- Legacy Order Storage
-- HPOS (High Performance Order Storage)
-
-## توسعه قابلیت‌ها
-
-توسعه دهندگان می‌توانند امکانات زیر را به افزونه اضافه کنند:
-
-- عملیات گروهی جدید
-- فیلترهای سفارشی سفارشات
-- وضعیت‌های اختصاصی سفارش
-- گزارش‌ها و لاگ‌های بیشتر
-- قوانین اعتبارسنجی سفارشی
-
-## استانداردهای کدنویسی
-
-این پروژه بر اساس استانداردهای زیر توسعه داده شده است:
-
-- WordPress Coding Standards
-- WooCommerce Development Guidelines
-- Secure WordPress Plugin Development Practices
+GitHub:
+https://github.com/amirrezashf
